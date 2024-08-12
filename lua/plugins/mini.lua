@@ -13,6 +13,30 @@ return {
 		-- - sd'   - [S]urround [D]elete [']quotes
 		-- - sr)'  - [S]urround [R]eplace [)] [']
 		require("mini.surround").setup()
+		-- require("mini.notify").setup({ -- :h mini-notify.txt
+		-- 	content = {
+		-- 		format = nil,
+		-- 		sort = nil,
+		-- 	},
+		-- 	lsp_progress = {
+		-- 		enable = true,
+		-- 		duration = 1000,
+		-- 	},
+		-- 	window = {
+		-- 		config = {},
+		-- 		max_width_share = 0.382,
+		-- 		windblend = 25,
+		-- 	},
+		-- })
+		-- require("mini.git").setup()
+		-- require("mini.diff").setup()
+		-- require("mini.doc")setup()
+		-- require("mini.map").setup()
+		-- require("mini.clue").setup()
+		-- require("mini.jump").setup()
+		-- require("mini.jump2d").setup()
+		-- require("mini.misc").setup()
+		-- require("mini.move").setup()
 	end,
 }
 

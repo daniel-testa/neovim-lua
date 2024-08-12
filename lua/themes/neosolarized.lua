@@ -7,19 +7,19 @@ return {
 	config = function()
 		local NeoSolarized = require("NeoSolarized")
 		NeoSolarized.setup({
+			style = "dark",
 			transparent = true, -- cambio 1
+			terminal_colors = true,
+			enable_italics = false,
 			styles = {
 				comments = { italic = true },
 				keywords = { italic = true },
 				functions = { bold = true },
-				variables = {},
+				variables = { italic = false, bold = true },
 				string = { italic = false }, -- cambio 2
 				underline = true,
 				undercurl = true,
 			},
-			-- on_colors = function(colors)
-			-- 	colors.bg_statusline = colors.none -- intento de hacer lualine transparente WARN: FALLó
-			-- end,
 		})
 		vim.cmd([[ colorscheme NeoSolarized ]])
 	end,

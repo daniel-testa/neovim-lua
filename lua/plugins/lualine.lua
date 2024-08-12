@@ -10,6 +10,7 @@ return {
 		end
 		local custom_NeoSolarized = require("lualine.themes.NeoSolarized") -- local var theme
 		custom_NeoSolarized.normal.c.bg = "" -- configura fondo de la seccion `c` a nada/NONE
+		custom_NeoSolarized.insert.c.bg = "" -- configura fondo de la seccion `c` a nada/NONE
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,

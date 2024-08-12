@@ -17,6 +17,7 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "80"
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 vim.opt.splitright = true
@@ -28,7 +29,7 @@ vim.opt.inccommand = "split" -- Ver substituciones mientras escribís
 vim.opt.cursorline = true
 vim.opt.guicursor = {}
 vim.opt.wrap = true
-vim.opt.scrolloff = 6
+vim.opt.scrolloff = 10
 
 -- [[ Accesos directos básicos ]] -- `:help vim.keymap.set()`
 
@@ -60,7 +61,8 @@ function Correr()
 	local extension = vim.fn.expand("%:e")
 	if extension == "py" then
 		vim.cmd(":w")
-		vim.cmd('9split | terminal python "%"')
+		-- vim.cmd('9split | terminal python "%"')
+		vim.cmd('vsplit | terminal python "%"')
 	elseif extension == "pyw" then
 		vim.cmd(":w")
 		vim.cmd('!pythonw "%"')
@@ -125,6 +127,7 @@ require("lazy").setup({
 	-- require("themes/tokyonight"),
 	require("themes/catppuccin"),
 	require("themes/neosolarized"),
+	require("themes/rose-pine"),
 }, {
 	ui = {
 		icons = {},
