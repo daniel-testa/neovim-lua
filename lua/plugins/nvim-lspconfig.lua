@@ -82,7 +82,7 @@ return {
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--    https://github.com/pmizio/typescript-tools.nvim
 			-- But for many setups, the LSP (`tsserver`) will work just fine
-			tsserver = {},
+			-- tsserver = {},
 			lua_ls = {
 				-- cmd = {...},
 				-- filetypes = { ...},
@@ -92,7 +92,10 @@ return {
 						completion = {
 							callSnippet = "Replace",
 						},
-						diagnostics = { disable = { "missing-fields" } },
+						diagnostics = {
+							disable = { "missing-fields" },
+							globals = { "vim" },
+						},
 					},
 				},
 			},
