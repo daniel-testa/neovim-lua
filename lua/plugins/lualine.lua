@@ -8,13 +8,13 @@ return {
 		local function inactivo()
 			return [[INACTIVO]]
 		end
-		local custom_NeoSolarized = require("lualine.themes.NeoSolarized") -- local var theme
-		custom_NeoSolarized.normal.c.bg = "" -- configura fondo de la seccion `c` a nada/NONE
-		custom_NeoSolarized.insert.c.bg = "" -- configura fondo de la seccion `c` a nada/NONE
+		-- local custom_NeoSolarized = require("lualine.themes.NeoSolarized") -- local var theme
+		-- custom_NeoSolarized.normal.c.bg = "" -- configura fondo de la seccion `c` a nada/NONE
+		-- custom_NeoSolarized.insert.c.bg = "" -- configura fondo de la seccion `c` a nada/NONE
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				theme = custom_NeoSolarized,
+				theme = "auto", -- custom_NeoSolarized,
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = {

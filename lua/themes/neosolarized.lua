@@ -8,7 +8,7 @@ return {
 		local NeoSolarized = require("NeoSolarized")
 		NeoSolarized.setup({
 			style = "dark",
-			transparent = true, -- cambio 1
+			transparent = false, -- cambio 1
 			terminal_colors = true,
 			enable_italics = false,
 			styles = {
