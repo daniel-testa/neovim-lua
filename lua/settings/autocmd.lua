@@ -1,9 +1,22 @@
 local autocmd = vim.api.nvim_create_autocmd
+local autogroup = vim.api.nvim_create_augroup
 require("settings.utils")
+
+autocmd("FileType", {
+	desc = "python ft mappings",
+	group = vim.api.nvim_create_augroup("py_mapping", { clear = true }),
+	pattern = "python",
+	callback = function()
+		vim.keymap.set("n", "<F5>", function()
+			vim.cmd("silent! write")
+			vim.cmd('vsplit | terminal python "%"')
+		end)
+	end,
+})
 
 autocmd("BufWritePost", {
 	desc = "Crea mensaje flotante al guardar un archivo",
-	group = vim.api.nvim_create_augroup("daniel-float-al-guardar", { clear = true }),
+	group = autogroup("daniel-float-al-guardar", { clear = true }),
 	pattern = "*",
 	callback = function()
 		Mensage_al_guardar()
@@ -12,7 +25,7 @@ autocmd("BufWritePost", {
 
 autocmd("TextYankPost", { -- `:help vim.highlight.on_yank()`
 	desc = "Resaltar al copiar(yank) texto",
-	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	group = autogroup("kickstart-highlight-yank", { clear = true }),
 	callback = function()
 		vim.highlight.on_yank()
 	end,

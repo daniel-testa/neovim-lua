@@ -1,15 +1,18 @@
---[[ Correr script Python]]
-function Correr()
-	local extension = vim.fn.expand("%:e")
-	if extension == "py" then
-		vim.cmd(":w")
-		-- vim.cmd('9split | terminal python "%"')
-		vim.cmd('vsplit | terminal python "%"')
-	elseif extension == "pyw" then
-		vim.cmd(":w")
-		vim.cmd('!pythonw "%"')
-	end
-end
+local cmd = vim.cmd
+local api = vim.api
+
+-- --[[ Correr script Python]]
+-- function Correr()
+-- 	local extension = vim.fn.expand("%:e")
+-- 	if extension == "py" then
+-- 		cmd(":silent! write")
+-- 		-- vim.cmd('9split | terminal python "%"')
+-- 		cmd('vsplit | terminal python "%"')
+-- 	elseif extension == "pyw" then
+-- 		cmd(":silent! write")
+-- 		cmd('!pythonw "%"')
+-- 	end
+-- end
 
 --[[ Mensaje flotante al guardar archivo ]]
 function Mensage_al_guardar()
@@ -29,10 +32,10 @@ function Mensage_al_guardar()
 	}
 	local buf = vim.api.nvim_create_buf(false, true) -- buffer
 	local win = vim.api.nvim_open_win(buf, true, opts) -- float
-	vim.api.nvim_buf_set_lines(buf, 0, -1, true, { mensaje }) -- añadir mensaje al buffer
-	vim.api.nvim_set_option_value("winhl", "Normal:DiagnosticOk", { win = win }) -- opciones y creación de la ventana
+	api.nvim_buf_set_lines(buf, 0, -1, true, { mensaje }) -- añadir mensaje al buffer
+	api.nvim_set_option_value("winhl", "Normal:DiagnosticOk", { win = win }) -- opciones y creación de la ventana
 	vim.defer_fn(function() -- api, corre function() después de x ms
-		vim.api.nvim_win_close(win, true) -- cierra float
+		api.nvim_win_close(win, true) -- cierra float
 	end, 2000)
 end
 

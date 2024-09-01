@@ -14,9 +14,9 @@ return {
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				theme = "auto", -- custom_NeoSolarized,
-				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
+				theme = "auto", --custom_NeoSolarized,
+				component_separators = {}, --{ left = "", right = "" },
+				section_separators = {}, --{ left = "", right = "" },
 				disabled_filetypes = {
 					statusline = {},
 					winbar = {},
@@ -33,29 +33,35 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
-				lualine_x = { "encoding", "fileformat", "filetype" },
+				lualine_c = {
+					{ "filename", path = 4, symbols = { unnamed = "[Sin Nombre]", newfile = "[Nuevo]" } },
+				},
+				lualine_x = { "encoding", "filetype" },
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
 			},
 			inactive_sections = {
-				lualine_a = { inactivo },
+				lualine_a = {},
 				lualine_b = {},
 				lualine_c = {},
-				lualine_x = {},
+				lualine_x = { inactivo },
 				lualine_y = {},
 				lualine_z = { "filename" },
 			},
-			tabline = {
-				lualine_a = {},
-				lualine_b = {
-					{ "filename", path = 3, symbols = { unnamed = "[Sin Nombre]", newfile = "[Nuevo]" } },
-				},
-				lualine_c = {},
-				lualine_x = {},
-				lualine_y = {},
-				lualine_z = { "tabs" },
-			},
+			tabline = {},
+			-- 	cond = function()
+			-- 		local vim.api.nvim_list_tabpages().getn(vim.api.nvim_list_tabpages())
+			-- 	end,
+			-- },
+			-- -- 	lualine_a = {},
+			-- 	lualine_b = {
+			-- 		{ "filename", path = 3, symbols = { unnamed = "[Sin Nombre]", newfile = "[Nuevo]" } },
+			-- 	},
+			-- 	lualine_c = {},
+			-- 	lualine_x = {},
+			-- 	lualine_y = {},
+			-- 	lualine_z = { "tabs" },
+			-- },
 			winbar = {},
 			inactive_winbar = {},
 			extensions = {},

@@ -22,6 +22,11 @@ return {
 				},
 			},
 		},
+		window = {
+			position = "left",
+			width = 25,
+			height = 15,
+		},
 	},
 }
 

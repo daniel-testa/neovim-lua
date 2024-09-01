@@ -75,9 +75,51 @@ return {
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 		local servers = {
-			-- clangd = {},
-			-- gopls = {},
-			pyright = {},
+			pylsp = {
+				settings = {
+					pylsp = {
+						plugins = {
+							pycodestyle = {
+								ignore = { "E501", "W503" },
+								maxLineLength = 100,
+								enabled = false,
+							},
+							pyflakes = {
+								enabled = false,
+							},
+						},
+						jedi_completion = {
+							enabled = true,
+							eager = true,
+							cache_for = { "aws_cdk" },
+							include_function_objects = true,
+							include_class_objects = true,
+							include_params = true,
+						},
+					},
+				},
+			},
+			basedpyright = {
+				settings = {
+					basedpyright = {
+						analysis = {
+							typeCheckingMode = "standard", -- off, basic, standard, strict, all
+							autoSearchPaths = true,
+							useLibraryCodeForTypes = true,
+							autoImportCompletions = true,
+							diagnosticsMode = "openFilesOnly", -- workspace, openFilesOnly
+							diagnosticSeverityOverrides = {
+								reportUnknownMemberType = false,
+								reportUnknownArgumentType = false,
+								-- reportUnusedClass = "warning",
+								-- reportUnusedFunction = "warning",
+								reportUndefinedVariable = true, -- ruff handles this with F822
+							},
+						},
+					},
+				},
+			},
+			-- pyright = {},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--    https://github.com/pmizio/typescript-tools.nvim

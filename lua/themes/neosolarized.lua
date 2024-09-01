@@ -21,7 +21,7 @@ return {
 				undercurl = true,
 			},
 		})
-		vim.cmd([[ colorscheme NeoSolarized ]])
+		-- vim.cmd([[ colorscheme NeoSolarized ]])
 	end,
 }
 

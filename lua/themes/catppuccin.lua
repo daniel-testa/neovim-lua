@@ -6,14 +6,10 @@ return {
 	name = "catppuccin-mocha",
 	priority = 1000,
 	color_overrides = {
-		mocha = {
-			base = "#000000",
-			mantle = "#000000",
-			crust = "#000000",
-		},
+		mocha = {},
 	},
 	init = function()
-		-- vim.cmd.colorscheme("catppuccin-mocha")
+		vim.cmd.colorscheme("catppuccin-mocha")
 	end,
 }
 
