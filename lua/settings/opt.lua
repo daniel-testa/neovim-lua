@@ -19,7 +19,7 @@ opt.updatetime = 250
 opt.timeoutlen = 300
 opt.splitright = true
 opt.splitbelow = true
-opt.list = false
+opt.list = true
 opt.listchars = { tab = "↹ ", trail = "·", nbsp = "␣", precedes = "⇇", extends = "⇉" }
 opt.fillchars = { vert = "▆" }
 opt.inccommand = "split"

@@ -33,10 +33,13 @@ require("lazy").setup({
 	require("plugins.todo-comments"),
 	require("plugins.which-key"),
 	-- NOTE: Themes
-	require("themes.tokyonight"),
 	require("themes.catppuccin"),
 	require("themes.neosolarized"),
-	require("themes.rose-pine"),
+	-- require("themes.rose-pine"),
+	-- require("themes.tokyonight"),
+	-- require("themes.kanagawa"),
+	require("themes.onedark"),
+	-- require("themes.onedarkpro"),
 }, {
 	ui = { icons = {} },
 	performance = {

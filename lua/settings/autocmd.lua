@@ -8,8 +8,8 @@ autocmd("FileType", {
 	pattern = "python",
 	callback = function()
 		vim.keymap.set("n", "<F5>", function()
-			vim.cmd("silent! write")
-			vim.cmd('vsplit | terminal python "%"')
+			vim.cmd("write")
+			vim.cmd('9split | terminal python "%"')
 		end)
 	end,
 })

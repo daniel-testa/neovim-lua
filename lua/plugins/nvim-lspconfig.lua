@@ -77,49 +77,50 @@ return {
 		local servers = {
 			pylsp = {
 				settings = {
-					pylsp = {
-						plugins = {
-							pycodestyle = {
-								ignore = { "E501", "W503" },
-								maxLineLength = 100,
-								enabled = false,
-							},
-							pyflakes = {
-								enabled = false,
-							},
+					plugins = {
+						-- formatter options
+						black = { enabled = true },
+						autopep8 = { enabled = false },
+						yapf = { enabled = false },
+						-- linter options
+						pylint = { enabled = true, executable = "pylint" },
+						pyflakes = { enabled = false },
+						pycodestyle = {
+							ignore = { "E501" },
+							maxLineLength = 100,
 						},
-						jedi_completion = {
-							enabled = true,
-							eager = true,
-							cache_for = { "aws_cdk" },
-							include_function_objects = true,
-							include_class_objects = true,
-							include_params = true,
-						},
+						-- type checker
+						pylsp_mypy = { enabled = false },
+						-- auto-completion options
+						jedi_completion = { fuzzy = true },
+						-- import sorting
+						pyls_isort = { enabled = true },
+						-- autoimport
+						rope_autoimport = { enabled = true, { completions = { enabled = true } } },
 					},
 				},
 			},
-			basedpyright = {
-				settings = {
-					basedpyright = {
-						analysis = {
-							typeCheckingMode = "standard", -- off, basic, standard, strict, all
-							autoSearchPaths = true,
-							useLibraryCodeForTypes = true,
-							autoImportCompletions = true,
-							diagnosticsMode = "openFilesOnly", -- workspace, openFilesOnly
-							diagnosticSeverityOverrides = {
-								reportUnknownMemberType = false,
-								reportUnknownArgumentType = false,
-								-- reportUnusedClass = "warning",
-								-- reportUnusedFunction = "warning",
-								reportUndefinedVariable = true, -- ruff handles this with F822
-							},
-						},
-					},
-				},
-			},
-			-- pyright = {},
+			-- pyright = {
+			-- 	settings = {
+			-- 		basedpyright = {
+			-- 			analysis = {
+			-- 				typeCheckingMode = "off", -- off, basic, standard, strict, all
+			-- 				autoSearchPaths = true,
+			-- 				useLibraryCodeForTypes = true,
+			-- 				autoImportCompletions = true,
+			-- 				diagnosticsMode = "openFilesOnly", -- workspace, openFilesOnly
+			-- 				diagnosticSeverityOverrides = {
+			-- 					reportMissingImports = true,
+			-- 					reportUnknownMemberType = false,
+			-- 					reportUnknownArgumentType = false,
+			-- 					reportUnusedClass = "warning",
+			-- 					reportUnusedFunction = "warning",
+			-- 					reportUndefinedVariable = true,
+			-- 				},
+			-- 			},
+			-- 		},
+			-- 	},
+			-- },
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--    https://github.com/pmizio/typescript-tools.nvim

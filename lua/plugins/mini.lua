@@ -32,7 +32,7 @@ return {
 		-- require("mini.diff").setup()
 		-- require("mini.doc")setup()
 		-- require("mini.map").setup()
-		-- require("mini.clue").setup()
+		-- require("mini.clue").seotup()
 		-- require("mini.jump").setup()
 		-- require("mini.jump2d").setup()
 		-- require("mini.misc").setup()

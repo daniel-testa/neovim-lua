@@ -14,14 +14,14 @@ return {
 			styles = {
 				comments = { italic = true },
 				keywords = { italic = true },
-				functions = { bold = true },
-				variables = { italic = false, bold = true },
+				functions = { bold = false },
+				variables = { italic = false, bold = false },
 				string = { italic = false }, -- cambio 2
 				underline = true,
 				undercurl = true,
 			},
 		})
-		-- vim.cmd([[ colorscheme NeoSolarized ]])
+		vim.cmd([[ colorscheme NeoSolarized ]])
 	end,
 }
 
