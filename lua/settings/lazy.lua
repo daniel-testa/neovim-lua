@@ -17,6 +17,7 @@ require("lazy").setup({
 	{ "NvChad/nvim-colorizer.lua", opts = {} },
 	{ "vladdoster/remember.nvim", opts = {} },
 	{ "superDross/run-with-me.vim" },
+	require("plugins.rainbow-delimiters"),
 	require("plugins.autopairs"),
 	require("plugins.conform"),
 	-- require("plugins.debug"),
@@ -38,8 +39,8 @@ require("lazy").setup({
 	-- require("themes.rose-pine"),
 	-- require("themes.tokyonight"),
 	-- require("themes.kanagawa"),
-	require("themes.onedark"),
-	-- require("themes.onedarkpro"),
+	-- require("themes.onedark"),
+	require("themes.onedarkpro"),
 }, {
 	ui = { icons = {} },
 	performance = {

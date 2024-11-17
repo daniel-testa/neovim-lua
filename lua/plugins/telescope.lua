@@ -2,7 +2,7 @@
 --  https://github.com/nvim-telescope/telescope.nvim
 return {
 	"nvim-telescope/telescope.nvim",
-	event = "VimEnter",
+	event = "VeryLazy",
 	branch = "0.1.x",
 	dependencies = {
 		-- NOTE: [[ PLugin: plenary.nvim ]]

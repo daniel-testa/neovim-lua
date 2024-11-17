@@ -2,7 +2,14 @@
 --  https://github.com/nvim-treesitter/nvim-treesitter
 return {
 	"nvim-treesitter/nvim-treesitter",
+	version = false,
 	build = ":TSUpdate",
+	event = { "VeryLazy" },
+	lazy = vim.fn.argc(-1) == 0,
+	init = function(plugin)
+		require("lazy.core.loader").add_to_rtp(plugin)
+		require("nvim-treesitter.query_predicates")
+	end,
 	opts = {
 		ensure_installed = { "bash", "diff", "html", "lua", "luadoc", "markdown", "vim", "vimdoc", "python" },
 		auto_install = true,

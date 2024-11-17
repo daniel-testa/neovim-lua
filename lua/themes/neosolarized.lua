@@ -8,20 +8,20 @@ return {
 		local NeoSolarized = require("NeoSolarized")
 		NeoSolarized.setup({
 			style = "dark",
-			transparent = false, -- cambio 1
+			transparent = false,
 			terminal_colors = true,
 			enable_italics = false,
 			styles = {
 				comments = { italic = true },
 				keywords = { italic = true },
 				functions = { bold = false },
-				variables = { italic = false, bold = false },
-				string = { italic = false }, -- cambio 2
-				underline = true,
+				variables = { italic = false, bold = true },
+				string = { italic = false },
+				underline = false,
 				undercurl = true,
 			},
 		})
-		vim.cmd([[ colorscheme NeoSolarized ]])
+		-- vim.cmd([[ colorscheme NeoSolarized ]])
 	end,
 }
 

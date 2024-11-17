@@ -77,26 +77,29 @@ return {
 		local servers = {
 			pylsp = {
 				settings = {
-					plugins = {
-						-- formatter options
-						black = { enabled = true },
-						autopep8 = { enabled = false },
-						yapf = { enabled = false },
-						-- linter options
-						pylint = { enabled = true, executable = "pylint" },
-						pyflakes = { enabled = false },
-						pycodestyle = {
-							ignore = { "E501" },
-							maxLineLength = 100,
+					pylsp = {
+						plugins = {
+							-- formatter options
+							black = { enabled = true },
+							-- autopep8 = { enabled = false },
+							yapf = { enabled = true },
+							-- linter options
+							-- pylint = { enabled = true, executable = "pylint" },
+							pyflakes = { enabled = false },
+							pycodestyle = {
+								ignore = { "E501", "W503", "C901" },
+								maxLineLength = 100,
+								maxComplexity = 25,
+							},
+							-- type checker
+							-- pylsp_mypy = { enabled = false },
+							-- auto-completion options
+							jedi_completion = { fuzzy = false },
+							-- import sorting
+							pyls_isort = { enabled = false },
+							-- autoimport
+							-- rope_autoimport = { enabled = true, { completions = { enabled = true } } },
 						},
-						-- type checker
-						pylsp_mypy = { enabled = false },
-						-- auto-completion options
-						jedi_completion = { fuzzy = true },
-						-- import sorting
-						pyls_isort = { enabled = true },
-						-- autoimport
-						rope_autoimport = { enabled = true, { completions = { enabled = true } } },
 					},
 				},
 			},

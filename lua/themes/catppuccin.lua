@@ -33,7 +33,7 @@ return {
 				operators = {},
 			},
 		})
-		-- vim.cmd.colorscheme("catppuccin-mocha")
+		vim.cmd.colorscheme("catppuccin-mocha")
 	end,
 }
 
