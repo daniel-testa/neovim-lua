@@ -79,60 +79,21 @@ return {
 				settings = {
 					pylsp = {
 						plugins = {
-							-- formatter options
 							black = { enabled = true },
-							-- autopep8 = { enabled = false },
 							yapf = { enabled = true },
-							-- linter options
-							-- pylint = { enabled = true, executable = "pylint" },
 							pyflakes = { enabled = false },
 							pycodestyle = {
 								ignore = { "E501", "W503", "C901" },
 								maxLineLength = 100,
 								maxComplexity = 25,
 							},
-							-- type checker
-							-- pylsp_mypy = { enabled = false },
-							-- auto-completion options
 							jedi_completion = { fuzzy = false },
-							-- import sorting
 							pyls_isort = { enabled = false },
-							-- autoimport
-							-- rope_autoimport = { enabled = true, { completions = { enabled = true } } },
 						},
 					},
 				},
 			},
-			-- pyright = {
-			-- 	settings = {
-			-- 		basedpyright = {
-			-- 			analysis = {
-			-- 				typeCheckingMode = "off", -- off, basic, standard, strict, all
-			-- 				autoSearchPaths = true,
-			-- 				useLibraryCodeForTypes = true,
-			-- 				autoImportCompletions = true,
-			-- 				diagnosticsMode = "openFilesOnly", -- workspace, openFilesOnly
-			-- 				diagnosticSeverityOverrides = {
-			-- 					reportMissingImports = true,
-			-- 					reportUnknownMemberType = false,
-			-- 					reportUnknownArgumentType = false,
-			-- 					reportUnusedClass = "warning",
-			-- 					reportUnusedFunction = "warning",
-			-- 					reportUndefinedVariable = true,
-			-- 				},
-			-- 			},
-			-- 		},
-			-- 	},
-			-- },
-			-- rust_analyzer = {},
-			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-			--    https://github.com/pmizio/typescript-tools.nvim
-			-- But for many setups, the LSP (`tsserver`) will work just fine
-			-- tsserver = {},
 			lua_ls = {
-				-- cmd = {...},
-				-- filetypes = { ...},
-				-- capabilities = {},
 				settings = {
 					Lua = {
 						completion = {
@@ -143,6 +104,13 @@ return {
 							globals = { "vim" },
 						},
 					},
+				},
+			},
+			gopls = {
+				completeUninported = true,
+				usePlaceholders = true,
+				analyses = {
+					unusedparams = true,
 				},
 			},
 		}
