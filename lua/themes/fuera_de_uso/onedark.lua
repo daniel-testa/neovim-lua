@@ -1,5 +1,6 @@
 return {
 	"navarasu/onedark.nvim",
+	enable = false,
 	dependencies = {
 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 	},

@@ -46,4 +46,3 @@ autocmd("TextYankPost", { -- `:help vim.highlight.on_yank()`
 		vim.highlight.on_yank()
 	end,
 })
--- vim: ts=2 sts=2 sw=2 et

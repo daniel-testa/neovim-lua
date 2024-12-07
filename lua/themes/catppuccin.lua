@@ -3,6 +3,7 @@
 
 return {
 	"catppuccin/nvim",
+	enable = true,
 	priority = 1000,
 	config = function()
 		require("catppuccin").setup({

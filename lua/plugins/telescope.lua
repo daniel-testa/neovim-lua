@@ -2,6 +2,7 @@
 --  https://github.com/nvim-telescope/telescope.nvim
 return {
 	"nvim-telescope/telescope.nvim",
+	enable = true,
 	event = "VeryLazy",
 	branch = "0.1.x",
 	dependencies = {
@@ -87,5 +88,3 @@ return {
 		end, { desc = "Bu[S]car archivos de [N]eovim" })
 	end,
 }
-
--- vim: ts=2 sts=2 sw=2 et

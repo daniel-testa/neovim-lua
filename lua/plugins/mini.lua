@@ -2,6 +2,7 @@
 --  https://github.com/echasnovski/mini.nvim
 return {
 	"echasnovski/mini.nvim",
+	enable = true,
 	config = function()
 		-- Mejora [A]lrederor [I]nside(adentro)
 		--  - va)  - [V]isual\[A]lrededor\[)]paréntesis

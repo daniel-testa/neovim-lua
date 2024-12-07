@@ -3,6 +3,7 @@
 
 return {
 	"nvim-neo-tree/neo-tree.nvim",
+	enable = true,
 	version = "*",
 	event = "VeryLazy",
 	dependencies = {

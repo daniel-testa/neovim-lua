@@ -2,6 +2,7 @@
 --  https://github.com/maxmx03/solarized.nvim
 return {
 	"maxmx03/solarized.nvim",
+	enable = false,
 	lazy = false,
 	priority = 1000,
 	config = function()
@@ -11,4 +12,3 @@ return {
 		vim.cmd.colorscheme("solarized")
 	end,
 }
--- vim: ts=2 sts=2 sw=2 et

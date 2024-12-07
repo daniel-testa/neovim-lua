@@ -2,6 +2,7 @@
 --  https://github.com/hrsh7th/nvim-cmp
 return {
 	"hrsh7th/nvim-cmp",
+	enable = true,
 	event = "InsertEnter",
 	dependencies = {
 

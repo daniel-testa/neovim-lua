@@ -2,6 +2,7 @@
 --  https://github.com/neovim/nvim-lspconfig
 return {
 	"neovim/nvim-lspconfig",
+	enable = true,
 	dependencies = {
 		-- NOTE: [[ PLugin: mason ]] -- Instalar automáticamente LSPs y herramientas relacionadas a stdpath para Neovim
 		--  https://github.com/williamboman/mason.nvim

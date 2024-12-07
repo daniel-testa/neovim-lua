@@ -3,6 +3,7 @@
 
 return {
 	"windwp/nvim-autopairs",
+	enable = true,
 	event = "VeryLazy",
 	-- Optional dependency
 	dependencies = { "hrsh7th/nvim-cmp" },

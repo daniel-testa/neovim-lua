@@ -1,4 +1,4 @@
-local cmd = vim.cmd
+-- local cmd = vim.cmd
 local api = vim.api
 
 -- --[[ Correr script Python]]
@@ -38,5 +38,3 @@ function Mensage_al_guardar()
 		api.nvim_win_close(win, true) -- cierra float
 	end, 2000)
 end
-
--- vim: ts=2 sts=2 sw=2 et

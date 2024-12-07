@@ -2,6 +2,7 @@
 --  https://github.com/stevearc/conform.nvim
 return {
 	"stevearc/conform.nvim",
+	enable = true,
 	lazy = false,
 	keys = {
 		{

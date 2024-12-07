@@ -2,6 +2,7 @@
 --  https://github.com/rose-pine/neovim
 return {
 	"rose-pine/neovim",
+	enable = false,
 	name = "rose-pine",
 	-- require("rose-pine").setup({
 	-- 	variant = "auto", -- auto, main, moon, or dawn
@@ -75,4 +76,3 @@ return {
 	-- vim.cmd("colorscheme rose-pine-moon")
 	-- vim.cmd("colorscheme rose-pine-dawn")
 }
--- vim: ts=2 sts=2 sw=2 et

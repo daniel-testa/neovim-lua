@@ -2,6 +2,7 @@
 --  https://github.com/folke/which-key.nvim
 return {
 	"folke/which-key.nvim",
+	enable = true,
 	event = "VeryLazy", -- Establece el evento de carga a 'VimEnter'
 	config = function() -- Esta es la función que corre, DESPUÉS de la carga
 		require("which-key").setup()
@@ -16,5 +17,3 @@ return {
 		})
 	end,
 }
-
--- vim: ts=2 sts=2 sw=2 et

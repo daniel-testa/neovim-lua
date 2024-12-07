@@ -2,6 +2,7 @@
 --  https://github.com/Tsuzat/NeoSolarized.nvim
 return {
 	"Tsuzat/NeoSolarized.nvim",
+	enable = false,
 	lazy = false,
 	priority = 1000,
 	config = function()
@@ -24,5 +25,3 @@ return {
 		-- vim.cmd([[ colorscheme NeoSolarized ]])
 	end,
 }
-
--- vim: ts=2 sts=2 sw=2 et

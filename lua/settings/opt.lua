@@ -25,7 +25,7 @@ opt.fillchars = { vert = "▆" }
 opt.inccommand = "split"
 opt.cursorline = true
 opt.guicursor = {}
-opt.wrap = true
+opt.wrap = false
 opt.scrolloff = 10
 opt.hlsearch = true
 

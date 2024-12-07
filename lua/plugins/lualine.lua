@@ -8,13 +8,19 @@ return {
 		local function inactivo()
 			return [[INACTIVO]]
 		end
+		if vim.g.colors_name == "gruvbox-baby" then
+			theme = "gruvbox-baby"
+		else
+			theme = "auto"
+		end
 		-- local custom_NeoSolarized = require("lualine.themes.NeoSolarized") -- local var theme
 		-- custom_NeoSolarized.normal.c.bg = "" -- configura fondo de la seccion `c` a nada/NONE
 		-- custom_NeoSolarized.insert.c.bg = "" -- configura fondo de la seccion `c` a nada/NONE
 		require("lualine").setup({
 			options = {
+
 				icons_enabled = true,
-				theme = "auto", --custom_NeoSolarized,
+				theme = theme, --"gruvbox-baby", -- "auto", --custom_NeoSolarized,
 				component_separators = { left = "|", right = "|" }, --{ left = "", right = "" },
 				section_separators = { left = "|", right = "|" }, --{ left = "", right = "" },
 				disabled_filetypes = {
