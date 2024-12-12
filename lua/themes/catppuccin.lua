@@ -23,19 +23,17 @@ return {
 				comments = { "italic" },
 				conditionals = { "italic" },
 				loops = { "bold" },
-				functions = {},
 				keywords = { "bold" },
-				strings = {},
 				variables = { "bold" },
-				numbers = {},
-				booleans = {},
-				properties = {},
-				types = {},
-				operators = {},
+				functions = {},
+				strings = {},
+				-- numbers = {},
+				-- booleans = {},
+				-- properties = {},
+				-- types = {},
+				-- operators = {},
 			},
 		})
 		vim.cmd.colorscheme("catppuccin-mocha")
 	end,
 }
-
--- vim: ts=2 sts=2 sw=2 et

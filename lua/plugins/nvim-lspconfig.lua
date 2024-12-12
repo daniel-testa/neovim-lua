@@ -88,6 +88,12 @@ return {
 								maxLineLength = 100,
 								maxComplexity = 25,
 							},
+							mccabe = { enabled = false },
+							-- flake8 = { enabled = false },
+							rope = {
+								enabled = true,
+							},
+							-- pylint = { enabled = false },
 							jedi_completion = { fuzzy = false },
 							pyls_isort = { enabled = false },
 						},
