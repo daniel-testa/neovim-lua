@@ -36,7 +36,11 @@ return {
 				help_tags = {
 					mappings = {
 						i = { ["<CR>"] = "file_vsplit" },
+						theme = "ivy",
 					},
+				},
+				find_files = {
+					theme = "ivy",
 				},
 			},
 			extensions = {
