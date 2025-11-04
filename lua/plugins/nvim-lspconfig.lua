@@ -80,23 +80,48 @@ return {
 				settings = {
 					pylsp = {
 						plugins = {
-							black = { enabled = true },
-							yapf = { enabled = true },
-							pyflakes = { enabled = false },
-							pycodestyle = {
-								ignore = { "E501", "W503", "C901" },
-								maxLineLength = 100,
-								maxComplexity = 25,
-							},
-							mccabe = { enabled = false },
-							-- flake8 = { enabled = false },
-							rope = {
-								enabled = true,
-							},
-							-- pylint = { enabled = false },
+							autopep8 = { enabled = false },
+							black = { enabled = false },
+							flake8 = { enabled = false },
 							jedi_completion = { fuzzy = false },
+							mccabe = { enabled = false },
+							pycodestyle = { enabled = false }, -- ignore = { "E501", "W503", "C901" },-- maxLineLength = 100,-- maxComplexity = 25, },
+							pyflakes = { enabled = false },
+							pylint = { enabled = false },
 							pyls_isort = { enabled = false },
+							pyls_mypy = { enabled = false },
+							pyls_black = { enabled = false },
+							rope = { enabled = false },
+							yapf = { enabled = false },
 						},
+					},
+				},
+			},
+			ruff = {
+				-- Notes on code actions: https://github.com/astral-sh/ruff-lsp/issues/119#issuecomment-1595628355
+				-- Get isort like behavior: https://github.com/astral-sh/ruff/issues/8926#issuecomment-1834048218
+				commands = {
+					RuffAutofix = {
+						function()
+							vim.lsp.buf.execute_command({
+								command = "ruff.applyAutofix",
+								arguments = {
+									{ uri = vim.uri_from_bufnr(0) },
+								},
+							})
+						end,
+						description = "Ruff: Fix all auto-fixable problems",
+					},
+					RuffOrganizeImports = {
+						function()
+							vim.lsp.buf.execute_command({
+								command = "ruff.applyOrganizeImports",
+								arguments = {
+									{ uri = vim.uri_from_bufnr(0) },
+								},
+							})
+						end,
+						description = "Ruff: Format imports",
 					},
 				},
 			},

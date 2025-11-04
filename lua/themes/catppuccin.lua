@@ -1,6 +1,4 @@
--- NOTE: [[ Theme: Catppuccin ]]
 --  https://github.com/catppuccin/nvim
-
 return {
 	"catppuccin/nvim",
 	enable = true,
